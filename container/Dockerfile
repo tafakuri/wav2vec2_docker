@@ -28,9 +28,10 @@ RUN mkdir libs
 RUN pip install soundfile sentencepiece gdown
 WORKDIR /opt/program/libs
 
-RUN git clone https://github.com/pytorch/fairseq.git
+# RUN git clone https://github.com/pytorch/fairseq.git
+RUN git clone https://github.com/facebookresearch/fairseq
 WORKDIR fairseq
-RUN git checkout c8a0659be5cdc15caa102d5bbf72b872567c4859
+# RUN git checkout c8a0659be5cdc15caa102d5bbf72b872567c4859
 RUN pip install --editable ./
 
 
